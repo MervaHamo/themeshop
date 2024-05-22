@@ -4,6 +4,18 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
+      "blocks": {
+        "announcement_AjdEiK": {
+          "type": "announcement",
+          "settings": {
+            "text": "Hello dear customer. welcome to our store",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_AjdEiK"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "show_line_separator": true,
