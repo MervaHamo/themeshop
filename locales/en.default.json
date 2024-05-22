@@ -101,7 +101,7 @@
     }
   },
   "onboarding": {
-    "product_title": "Example",
+    "product_title": "Example product title",
     "collection_title": "Your collection's name"
   },
   "products": {
@@ -282,8 +282,8 @@
       "title": "Your cart",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
-      "total": "total",
-      "new_total": "New total",
+      "estimated_total": "Estimated total",
+      "new_estimated_total": "New estimated total",
       "note": "Order special instructions",
       "checkout": "Check out",
       "empty": "Your cart is empty",
