@@ -4,18 +4,6 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "blocks": {
-        "announcement_bFbmdR": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement_bFbmdR"
-      ],
       "settings": {
         "color_scheme": "scheme-1",
         "show_line_separator": true,

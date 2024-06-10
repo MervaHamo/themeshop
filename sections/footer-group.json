@@ -4,78 +4,8 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {
-        "link_list_QfpPc3": {
-          "type": "link_list",
-          "settings": {
-            "heading": "<a href=\"https:\/\/www.facebook.com\/\" target=\"_blank\">Facebook<\/a>",
-            "menu": ""
-          }
-        },
-        "link_list_FjUrQa": {
-          "type": "link_list",
-          "settings": {
-            "heading": "<a href=\"https:\/\/www.instagram.com\/\" target=\"_blank\">Instagram<\/a>",
-            "menu": ""
-          }
-        },
-        "link_list_D4mNxX": {
-          "type": "link_list",
-          "settings": {
-            "heading": "<a href=\"https:\/\/github.com\/\" target=\"_blank\">Github<\/a>",
-            "menu": ""
-          }
-        },
-        "link_list_TbhcRB": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
-          }
-        },
-        "text_7JWwjr": {
-          "type": "text",
-          "settings": {
-            "heading": "Contact",
-            "subtext": "<h4>385 Noah Place Suite <\/h4><h4>878info@form.com<\/h4><h4>877-255-7945<br\/><br\/><\/h4>"
-          }
-        },
-        "image_KLCkXq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/SeekPng.com_instagram-png-logo_29915.png",
-            "image_width": 145,
-            "alignment": ""
-          }
-        },
-        "image_7czHpU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/northern-forest.jpg",
-            "image_width": 205,
-            "alignment": ""
-          }
-        },
-        "text_RdjcpM": {
-          "type": "text",
-          "settings": {
-            "heading": "Info",
-            "subtext": "<h4>Privacy & Cookies<\/h4><h4>Terms & Conditions      <\/h4><h4>Blog <br\/><br\/><\/h4>"
-          }
-        }
-      },
-      "block_order": [
-        "link_list_QfpPc3",
-        "link_list_FjUrQa",
-        "link_list_D4mNxX",
-        "link_list_TbhcRB",
-        "text_7JWwjr",
-        "image_KLCkXq",
-        "image_7czHpU",
-        "text_RdjcpM"
-      ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
