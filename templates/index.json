@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "25% OFFER ON ALLL OUR PRODUCTS",
             "heading_size": "h0"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "TAKE A LOOK!",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -27,6 +27,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/autumn-photographer-taking-picture_925x_8d21274b-70e5-4aad-9f41-020533676041.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "desktop_content_position": "bottom-center",

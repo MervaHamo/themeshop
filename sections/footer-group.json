@@ -5,13 +5,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list_QPVMtg": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
-          }
-        },
         "link_list_9MKtJR": {
           "type": "link_list",
           "settings": {
@@ -25,12 +18,44 @@
             "heading": "<a href=\"https:\/\/www.instagram.com\/\" target=\"_blank\">Instagram<\/a>",
             "menu": ""
           }
+        },
+        "link_list_NHjWdw": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Search",
+            "menu": "footer"
+          }
+        },
+        "link_list_QPVMtg": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
+          }
+        },
+        "text_JrgqHH": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact",
+            "subtext": "<h5>385 Noah Place Suite <\/h5><h5>878info@form.com\u2028<\/h5><h5>877-255-7945<br\/><br\/><\/h5>"
+          }
+        },
+        "image_cKxNbP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SeekPng.com_instagram-png-logo_29915.png",
+            "image_width": 150,
+            "alignment": ""
+          }
         }
       },
       "block_order": [
-        "link_list_QPVMtg",
         "link_list_9MKtJR",
-        "link_list_wYXnyk"
+        "link_list_wYXnyk",
+        "link_list_NHjWdw",
+        "link_list_QPVMtg",
+        "text_JrgqHH",
+        "image_cKxNbP"
       ],
       "settings": {
         "color_scheme": "scheme-3",
