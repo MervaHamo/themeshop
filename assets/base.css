@@ -17,15 +17,7 @@
   --shadow-visible: var(--product-card-shadow-visible);
   --image-padding: var(--product-card-image-padding);
   --text-alignment: var(--product-card-text-alignment);
-
-  /* Styling för produktkort */
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid rgba(0, 0, 0, var(--border-opacity));
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(0, 0, 0, var(--shadow-opacity));
-  padding: var(--image-padding);
-  text-align: var(--text-alignment);
 }
-
 
 .collection-card-wrapper .card,
 .contains-card--collection {

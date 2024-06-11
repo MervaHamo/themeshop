@@ -2,46 +2,32 @@ class CartDrawer extends HTMLElement {
   constructor() {
     super();
 
-    this.addEventListener('keyup', (evt) => {
-      if (evt.code === 'Escape') {
-        this.close();
-      }
-    });
-
-    const overlay = this.querySelector('#CartDrawer-Overlay');
-    if (overlay) {
-      overlay.addEventListener('click', this.close.bind(this));
-    }
-
+    this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
+    this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
   }
 
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
-    if (cartLink) {
-      cartLink.setAttribute('role', 'button');
-      cartLink.setAttribute('aria-haspopup', 'dialog');
-      cartLink.addEventListener('click', (event) => {
+    cartLink.setAttribute('role', 'button');
+    cartLink.setAttribute('aria-haspopup', 'dialog');
+    cartLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      this.open(cartLink);
+    });
+    cartLink.addEventListener('keydown', (event) => {
+      if (event.code.toUpperCase() === 'SPACE') {
         event.preventDefault();
         this.open(cartLink);
-      });
-      cartLink.addEventListener('keydown', (event) => {
-        if (event.code.toUpperCase() === 'SPACE') {
-          event.preventDefault();
-          this.open(cartLink);
-        }
-      });
-    }
+      }
+    });
   }
 
   open(triggeredBy) {
-    if (triggeredBy) {
-      this.setActiveElement(triggeredBy);
-    }
+    if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
-    if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) {
-      this.setSummaryAccessibility(cartDrawerNote);
-    }
+    if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
+    // here the animation doesn't seem to always get triggered. A timeout seem to help
     setTimeout(() => {
       this.classList.add('animate', 'active');
     });
@@ -71,9 +57,8 @@ class CartDrawer extends HTMLElement {
     cartDrawerNote.setAttribute('role', 'button');
     cartDrawerNote.setAttribute('aria-expanded', 'false');
 
-    const nextElement = cartDrawerNote.nextElementSibling;
-    if (nextElement && nextElement.getAttribute('id')) {
-      cartDrawerNote.setAttribute('aria-controls', nextElement.id);
+    if (cartDrawerNote.nextElementSibling.getAttribute('id')) {
+      cartDrawerNote.setAttribute('aria-controls', cartDrawerNote.nextElementSibling.id);
     }
 
     cartDrawerNote.addEventListener('click', (event) => {
@@ -84,25 +69,18 @@ class CartDrawer extends HTMLElement {
   }
 
   renderContents(parsedState) {
-    const drawerInner = this.querySelector('.drawer__inner');
-    if (drawerInner && drawerInner.classList.contains('is-empty')) {
-      drawerInner.classList.remove('is-empty');
-    }
+    this.querySelector('.drawer__inner').classList.contains('is-empty') &&
+      this.querySelector('.drawer__inner').classList.remove('is-empty');
     this.productId = parsedState.id;
     this.getSectionsToRender().forEach((section) => {
       const sectionElement = section.selector
         ? document.querySelector(section.selector)
         : document.getElementById(section.id);
-      if (sectionElement) {
-        sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
-      }
+      sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
     });
 
     setTimeout(() => {
-      const overlay = this.querySelector('#CartDrawer-Overlay');
-      if (overlay) {
-        overlay.addEventListener('click', this.close.bind(this));
-      }
+      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
     });
   }
@@ -121,6 +99,10 @@ class CartDrawer extends HTMLElement {
         id: 'cart-icon-bubble',
       },
     ];
+  }
+
+  getSectionDOM(html, selector = '.shopify-section') {
+    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector);
   }
 
   setActiveElement(element) {
