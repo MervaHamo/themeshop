@@ -5,6 +5,20 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "link_list_N9irQR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Search",
+            "menu": "footer"
+          }
+        },
+        "link_list_QPVMtg": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "main-menu"
+          }
+        },
         "link_list_9MKtJR": {
           "type": "link_list",
           "settings": {
@@ -19,43 +33,29 @@
             "menu": ""
           }
         },
-        "link_list_NHjWdw": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Search",
-            "menu": "footer"
-          }
-        },
-        "link_list_QPVMtg": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
-          }
-        },
-        "text_JrgqHH": {
+        "text_XinjkP": {
           "type": "text",
           "settings": {
             "heading": "Contact",
-            "subtext": "<h5>385 Noah Place Suite <\/h5><h5>878info@form.com\u2028<\/h5><h5>877-255-7945<br\/><br\/><\/h5>"
+            "subtext": "<p>385 Noah Place Suite <\/p><p>878info@form.com\u2028<\/p><p>877-255-7945<\/p>"
           }
         },
-        "image_cKxNbP": {
+        "image_EMxnLD": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/SeekPng.com_instagram-png-logo_29915.png",
-            "image_width": 150,
+            "image_width": 170,
             "alignment": ""
           }
         }
       },
       "block_order": [
+        "link_list_N9irQR",
+        "link_list_QPVMtg",
         "link_list_9MKtJR",
         "link_list_wYXnyk",
-        "link_list_NHjWdw",
-        "link_list_QPVMtg",
-        "text_JrgqHH",
-        "image_cKxNbP"
+        "text_XinjkP",
+        "image_EMxnLD"
       ],
       "settings": {
         "color_scheme": "scheme-3",
